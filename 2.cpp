@@ -9,67 +9,34 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        if(!l1)
-        {
-            return l2;
-        }
-        if(!l2)
-        {
-            return l1;
-        }
-        ListNode* l = new ListNode(0);
-        ListNode* res = l;
+        ListNode* end = new ListNode(0);
+        ListNode* head = end;
         int val = 0;
-        while(l1 && l2)
+        while(l1 || l2 || val)
         {
-            l->val = (l1->val + l2->val + val) % 10;
-            val = (l1->val + l2->val + val) / 10;
-            l1 = l1->next;
-            l2 = l2->next;
-            if(l1 && l2)
+            int num = 0;
+            if(l1)
+            {
+                num += l1->val;
+                l1 = l1->next;
+            }
+            if(l2)
+            {
+                num += l2->val;
+                l2 = l2->next;
+            }
+
+            num += val;
+            end->val = num % 10;
+            val = num / 10;
+
+            if(l1 || l2 || val)
             {
                 ListNode* tmp = new ListNode(0);
-                // insert listNode
-                l->next = tmp;
-                l = l->next;
+                end->next = tmp;
+                end = end->next;
             }
         }
-        while(l1)
-        {
-            if(val == 0)
-            {
-                l->next = l1;
-                return res;
-            }
-
-            ListNode* tmp = new ListNode(0);
-            l->next = tmp;
-            l = l->next;
-            l->val = (l1->val + val) % 10;
-            val = (l1->val + val) / 10;
-            l1 = l1->next;
-        }
-        while(l2)
-        {
-            if(val == 0)
-            {
-                l->next = l2;
-                return res;
-            }
-
-            ListNode* tmp = new ListNode(0);
-            l->next = tmp;
-            l = l->next;
-            l->val = (l2->val + val) % 10;
-            val = (l2->val + val) / 10;
-            l2 = l2->next;
-        }
-        if(val > 0)
-        {
-            ListNode* tmp = new ListNode(0);
-            l->next = tmp;
-            l->next->val = val;
-        }
-        return res;
+        return head;
     }
 };
