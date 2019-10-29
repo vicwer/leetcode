@@ -5,3 +5,4 @@
 - 2.cpp 两数相加 Add_Two_Numbers ✔️
 - 3.cpp 无重复字符的最长字串 Longest_Substring_Without_Repeating_Characters ✔️
 - 5.cpp 最长回文字符串 Lonest_Palindromic_Substring (暴力) ✔️
+- 6.cpp Z字形传换 ZigZag_Conversion ✔️
