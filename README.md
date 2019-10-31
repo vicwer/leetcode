@@ -17,3 +17,5 @@
 |12.cpp|整数转罗马数字<br>Integer to Roman|字符串,数字|✔️|
 |13.cpp|罗马数字转整数<br>Roman to Integer|字符串,数字|✔️|
 |14.cpp|最长公共前缀<br>Longest Common Prefix|字符串|✔️|
+|15.cpp|三数之和<br>3Sum|快排,双指针|✔️|
+|16.cpp|最接近的三数之和<br>3Sum Closest|快排,双指针|✔️|
