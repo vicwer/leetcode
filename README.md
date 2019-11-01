@@ -19,3 +19,8 @@
 |14.cpp|最长公共前缀<br>Longest Common Prefix|字符串|✔️|
 |15.cpp|三数之和<br>3Sum|快排,双指针|✔️|
 |16.cpp|最接近的三数之和<br>3Sum Closest|快排,双指针|✔️|
+|17.cpp|电话号码的字母组合<br>Letter Combinations of a Phone Number|❔|❔|
+|18.cpp|四数之和<br>4Sum|快排,双指针|✔️|
+|19.cpp|删除链表的倒数第N个节点<br>Remove Nth Node From End of List|链表,快慢指针|✔️|
+|20.cpp|有效的括号<br>Valid Parentheses|字符串,ascii码|✔️|
+|21.cpp|合并两个有序链表<br>Merge Two Sorted Lists|链表,合并|✔️|
